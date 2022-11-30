@@ -14,6 +14,8 @@ def random_pokemon():
 def run():
   player_one_pokemon = random_pokemon()
   print("You were given {}".format(player_one_pokemon))
+  player_two_pokemon = random_pokemon()
+  print("Your opponent was given {}".format(player_two_pokemon))
 
 
 
