@@ -15,7 +15,7 @@ def run():
   player_one_pokemon = random_pokemon()
   print("You were given {}".format(player_one_pokemon))
   player_two_pokemon = random_pokemon()
-  print("Your opponent was given {}".format(player_two_pokemon))
+  print("Your opponent was given {}".format(player_two_pokemon['name']))
   chosen_stat = input("Which stats would you like to choose? select either id, height or weight ")
   player_one_stat = player_one_pokemon[chosen_stat]
   player_two_stat = player_two_pokemon[chosen_stat]
