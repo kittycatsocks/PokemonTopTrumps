@@ -15,22 +15,23 @@ def run():
   player_one_pokemon = random_pokemon()
   print("You were given {}. It's ID is {}, it's height is {}cm and weight is {}kg".format(player_one_pokemon['name'], player_one_pokemon['id'], player_one_pokemon['height'], player_one_pokemon['weight']))
   player_two_pokemon = random_pokemon()
-  print("Your opponent was given {}".format(player_two_pokemon['name']))
-  chosen_stat = input("Which stats would you like to choose? select either id, height or weight ")
+  print("\nYour opponent was given {}".format(player_two_pokemon['name']))
+  chosen_stat = input("\nWhich stats would you like to choose? select either id, height or weight ")
   player_one_stat = player_one_pokemon[chosen_stat]
   player_two_stat = player_two_pokemon[chosen_stat]
   if player_one_stat > player_two_stat:
-    print ("You win! Your Pokemon's {} was {} and your opponents was {}".format(chosen_stat, player_one_stat, player_two_stat))
+    print ("\nYou win! Your Pokemon's {} was {} and your opponents was {}".format(chosen_stat, player_one_stat, player_two_stat))
   else:
-    print ("You lose! Your Pokemon's {} was {} and your opponents was {}".format(chosen_stat, player_one_stat, player_two_stat))
+    print ("\nYou lose! Your Pokemon's {} was {} and your opponents was {}".format(chosen_stat, player_one_stat, player_two_stat))
 
 
 
 
 run()
 
-end_of_game = input("Would you like to play again? y/n ")
+end_of_game = input("\nWould you like to play again? y/n ")
 if end_of_game == "y":
+  print("\n")
   run()
 else:
-  print("Thanks for playing!")
+  print("\nThanks for playing!")
