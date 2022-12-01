@@ -28,3 +28,9 @@ def run():
 
 
 run()
+
+end_of_game = input("Would you like to play again? y/n ")
+if end_of_game == "y":
+  run()
+else:
+  print("Thanks for playing!")
