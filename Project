@@ -2,7 +2,7 @@ import random
 import requests
 import webbrowser
 
-print("Welcome to the Pokemon battle!/n")
+print("Welcome to the Pokemon battle!\n")
 
 def random_pokemon():
   pokedex_number = random.randint(1, 151)
