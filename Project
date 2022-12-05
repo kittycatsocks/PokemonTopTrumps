@@ -1,6 +1,8 @@
 import random
 import requests
+import webbrowser
 
+print("Welcome to the Pokemon battle!/n")
 
 def random_pokemon():
   pokedex_number = random.randint(1, 151)
@@ -19,12 +21,15 @@ def run():
   chosen_stat = input("\nWhich stats would you like to choose? select either id, height or weight ")
   player_one_stat = player_one_pokemon[chosen_stat]
   player_two_stat = player_two_pokemon[chosen_stat]
+    
   if player_one_stat > player_two_stat:
     print ("\nYou win! Your Pokemon's {} was {} and your opponents was {}".format(chosen_stat, player_one_stat, player_two_stat))
-  else:
+    webbrowser.open('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{}.png'.format(player_one_pokemon['id']))
+  elif player_two_stat > player_one_stat:
     print ("\nYou lose! Your Pokemon's {} was {} and your opponents was {}".format(chosen_stat, player_one_stat, player_two_stat))
-
-
+    webbrowser.open('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{}.png'.format(player_two_pokemon['id']))
+  else:
+    print('Draw!')
 
 
 run()
