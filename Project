@@ -30,13 +30,15 @@ def run():
     webbrowser.open('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{}.png'.format(player_two_pokemon['id']))
   else:
     print('Draw!')
+    
+  end_of_game = input("\nWould you like to play again? y/n ")
+  if end_of_game == "y":
+    print("\n")
+    run()
+  else:
+    print("\nThanks for playing!")
 
 
 run()
 
-end_of_game = input("\nWould you like to play again? y/n ")
-if end_of_game == "y":
-  print("\n")
-  run()
-else:
-  print("\nThanks for playing!")
+
