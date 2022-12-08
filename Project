@@ -6,7 +6,7 @@ import webbrowser
 print("Welcome to the Pokemon battle!\n")
 
 
-def region_selection():
+def region_selection_run():
   global region_selection
   region_selection = input("Which region would you like to choose? kanto, johto, hoenn or sinnoh? ")
 
@@ -45,7 +45,7 @@ def random_pokemon_two():
           'weight': pokemon_stats['weight'], }
 
 def run():
-  region_selection()
+  region_selection_run()
   player_one_pokemon = random_pokemon()
   print("\nYou were given {}. It's ID is {}, it's height is {}cm and weight is {}kg".format(player_one_pokemon['name'], player_one_pokemon['id'], player_one_pokemon['height'], player_one_pokemon['weight']))
   player_two_pokemon = random_pokemon_two()
